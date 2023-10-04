@@ -11,7 +11,7 @@ public class StatisticsDisplay implements Observer, DisplayData {
 
     @Override
     public void display() {
-        System.out.println("Avg, Max, Min: 80, 80, 80");
+        System.out.println("Avg, Max, Min: 80, 80, 80.");
     }
 
     @Override

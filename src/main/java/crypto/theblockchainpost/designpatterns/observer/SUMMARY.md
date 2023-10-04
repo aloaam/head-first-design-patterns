@@ -21,6 +21,10 @@ its subscribers. Where the former is the subject and the latter are the observer
 In Java, JavaBeans and Swing libraries used the observer pattern.
 
 
+This section explains the observer pattern creating it from scratch using a weather-data
+application. Then it creates a Swing class showing how this patter is implemented there.
+This implementation is stored under the package example.
+
 
 
 
