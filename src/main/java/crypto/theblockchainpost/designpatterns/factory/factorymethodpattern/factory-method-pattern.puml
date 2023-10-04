@@ -1,0 +1,74 @@
+@startuml
+
+enum PizzaType{
+    CHEESE
+    PEPPERONI
+    CLAM
+    VEGGIE
+}
+
+abstract PizzaStore {
+    + orderPizza() : void;
+    # {abstract} createPizza(PizzaType pizzaType): Pizza
+}
+
+class NewYorkPizzaStore {
+}
+
+class ChicagoPizzaStore {
+}
+
+
+
+
+abstract Pizza {
+    - String pizzaName
+    - String dough
+    - String sauce
+    + prepare(): void
+    + bake(): void
+    + cut(): void
+    + box(): void
+    + getters()
+    + setters()
+}
+
+class NewYorkClamPizza {
+}
+
+class NewYorkCheesePizza {
+}
+
+class NewYorkPepperoniPizza {
+}
+
+class NewYorkVeggiePizza {
+}
+
+class ChicagoClamPizza {
+}
+
+class ChicagoCheesePizza {
+}
+
+class ChicagoPepperoniPizza {
+}
+
+class ChicagoVeggiePizza {
+}
+
+
+NewYorkPizzaStore <|-- PizzaStore
+ChicagoPizzaStore <|-- PizzaStore
+
+Pizza <|-- NewYorkClamPizza
+Pizza <|-- NewYorkCheesePizza
+Pizza <|-- NewYorkPepperoniPizza
+Pizza <|-- NewYorkVeggiePizza
+
+Pizza <|-- ChicagoClamPizza
+Pizza <|-- ChicagoCheesePizza
+Pizza <|-- ChicagoPepperoniPizza
+Pizza <|-- ChicagoVeggiePizza
+
+@enduml

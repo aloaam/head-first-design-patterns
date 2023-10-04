@@ -1,4 +1,4 @@
-package crypto.theblockchainpost.designpatterns.factory.secondexample;
+package crypto.theblockchainpost.designpatterns.factory.factorymethodpattern;
 
 import crypto.theblockchainpost.designpatterns.factory.Pizza;
 import crypto.theblockchainpost.designpatterns.factory.simplefactory.PizzaType;
@@ -9,13 +9,12 @@ import crypto.theblockchainpost.designpatterns.factory.simplefactory.PizzaType;
  */
 public abstract class PizzaStore {
 
-    public Pizza orderPizza(PizzaType pizzaType) {
+    public void orderPizza(PizzaType pizzaType) {
         Pizza pizza = createPizza(pizzaType);
         pizza.prepare();
         pizza.bake();
         pizza.cut();
         pizza.box();
-        return pizza;
     }
 
     protected abstract Pizza createPizza(PizzaType pizzaType);

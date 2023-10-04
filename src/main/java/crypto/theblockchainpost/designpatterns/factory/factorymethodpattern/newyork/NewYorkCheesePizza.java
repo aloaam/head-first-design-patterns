@@ -1,4 +1,4 @@
-package crypto.theblockchainpost.designpatterns.factory.secondexample.newyork;
+package crypto.theblockchainpost.designpatterns.factory.factorymethodpattern.newyork;
 
 import crypto.theblockchainpost.designpatterns.factory.Pizza;
 

@@ -1,11 +1,11 @@
-package crypto.theblockchainpost.designpatterns.factory.secondexample;
+package crypto.theblockchainpost.designpatterns.factory.factorymethodpattern;
 
-import crypto.theblockchainpost.designpatterns.factory.secondexample.chicagostyle.ChicagoPizzaStore;
-import crypto.theblockchainpost.designpatterns.factory.secondexample.newyork.NewYorkPizzaStore;
+import crypto.theblockchainpost.designpatterns.factory.factorymethodpattern.chicagostyle.ChicagoPizzaStore;
+import crypto.theblockchainpost.designpatterns.factory.factorymethodpattern.newyork.NewYorkPizzaStore;
 
 import static crypto.theblockchainpost.designpatterns.factory.simplefactory.PizzaType.CHEESE;
 
-public class FactoryDesign {
+public class FactoryMethodPattern {
 
     public static void main(String[] args) {
         PizzaStore newYorkPizzaStore = new NewYorkPizzaStore();

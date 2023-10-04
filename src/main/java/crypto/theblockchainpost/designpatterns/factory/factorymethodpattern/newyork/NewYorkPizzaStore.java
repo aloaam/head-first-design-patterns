@@ -1,8 +1,8 @@
-package crypto.theblockchainpost.designpatterns.factory.secondexample.newyork;
+package crypto.theblockchainpost.designpatterns.factory.factorymethodpattern.newyork;
 
 import crypto.theblockchainpost.designpatterns.factory.FactoryRuntimeException;
 import crypto.theblockchainpost.designpatterns.factory.Pizza;
-import crypto.theblockchainpost.designpatterns.factory.secondexample.PizzaStore;
+import crypto.theblockchainpost.designpatterns.factory.factorymethodpattern.PizzaStore;
 import crypto.theblockchainpost.designpatterns.factory.simplefactory.PizzaType;
 
 public class NewYorkPizzaStore extends PizzaStore {

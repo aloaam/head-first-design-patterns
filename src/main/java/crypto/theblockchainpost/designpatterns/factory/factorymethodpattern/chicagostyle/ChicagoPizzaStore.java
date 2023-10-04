@@ -1,8 +1,8 @@
-package crypto.theblockchainpost.designpatterns.factory.secondexample.chicagostyle;
+package crypto.theblockchainpost.designpatterns.factory.factorymethodpattern.chicagostyle;
 
 import crypto.theblockchainpost.designpatterns.factory.FactoryRuntimeException;
 import crypto.theblockchainpost.designpatterns.factory.Pizza;
-import crypto.theblockchainpost.designpatterns.factory.secondexample.PizzaStore;
+import crypto.theblockchainpost.designpatterns.factory.factorymethodpattern.PizzaStore;
 import crypto.theblockchainpost.designpatterns.factory.simplefactory.PizzaType;
 
 public class ChicagoPizzaStore extends PizzaStore {
