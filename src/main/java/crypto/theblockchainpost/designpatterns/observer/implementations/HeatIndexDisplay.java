@@ -2,7 +2,9 @@ package crypto.theblockchainpost.designpatterns.observer.implementations;
 
 import crypto.theblockchainpost.designpatterns.observer.interfaces.DisplayData;
 import crypto.theblockchainpost.designpatterns.observer.interfaces.Observer;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class HeatIndexDisplay implements Observer, DisplayData {
 
     private final WeatherData weatherData;
@@ -17,8 +19,8 @@ public class HeatIndexDisplay implements Observer, DisplayData {
 
     @Override
     public void display() {
-        System.out.printf("Heat Index: %s", computeHeatIndex(temperature, humidity));
-        System.out.println(".");
+        log.info("Heat Index: {}", computeHeatIndex(temperature, humidity));
+        log.info(".");
     }
 
     @Override

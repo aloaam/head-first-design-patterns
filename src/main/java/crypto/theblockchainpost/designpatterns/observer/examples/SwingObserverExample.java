@@ -1,9 +1,12 @@
 package crypto.theblockchainpost.designpatterns.observer.examples;
 
+import lombok.extern.slf4j.Slf4j;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+@Slf4j
 public class SwingObserverExample {
 
     JFrame frame;
@@ -25,14 +28,14 @@ public class SwingObserverExample {
     static class AngelListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("Don't do it, you might regret it!");
+            log.info("Don't do it, you might regret it!");
         }
     }
 
     static class DevilListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("Come on do it, you only live once!");
+            log.info("Come on do it, you only live once!");
         }
     }
 

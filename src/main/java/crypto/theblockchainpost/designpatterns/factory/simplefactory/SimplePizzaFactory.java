@@ -2,12 +2,14 @@ package crypto.theblockchainpost.designpatterns.factory.simplefactory;
 
 import crypto.theblockchainpost.designpatterns.factory.FactoryRuntimeException;
 import crypto.theblockchainpost.designpatterns.factory.Pizza;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class SimplePizzaFactory {
 
     public static Pizza createPizza(PizzaType pizzaType) {
 
-        System.out.println(String.format("Creating pizza of type: %s", pizzaType.name()));
+        log.info("Creating pizza of type: {}", pizzaType.name());
         switch (pizzaType) {
             case CHEESE -> {
                 return new CheesePizza();

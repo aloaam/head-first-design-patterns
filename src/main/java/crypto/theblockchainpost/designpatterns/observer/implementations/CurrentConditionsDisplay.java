@@ -2,7 +2,9 @@ package crypto.theblockchainpost.designpatterns.observer.implementations;
 
 import crypto.theblockchainpost.designpatterns.observer.interfaces.DisplayData;
 import crypto.theblockchainpost.designpatterns.observer.interfaces.Observer;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class CurrentConditionsDisplay implements Observer, DisplayData {
 
     private final WeatherData weatherData;
@@ -18,11 +20,10 @@ public class CurrentConditionsDisplay implements Observer, DisplayData {
 
     @Override
     public void display() {
-        System.out.printf("Weather conditions: ");
-        System.out.printf("humidity: %s, ", humidity);
-        System.out.printf("pressure: %s, ", pressure);
-        System.out.printf("temperature: %s", temperature);
-        System.out.println(".");
+        log.info("Weather conditions: ");
+        log.info("humidity: {}, ", humidity);
+        log.info("pressure: {}, ", pressure);
+        log.info("temperature: {}", temperature);
     }
 
     @Override

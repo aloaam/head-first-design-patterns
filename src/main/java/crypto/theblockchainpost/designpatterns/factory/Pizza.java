@@ -2,9 +2,13 @@ package crypto.theblockchainpost.designpatterns.factory;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+
+import java.io.Serializable;
 
 @Setter
 @Getter
+@Slf4j
 public abstract class Pizza {
 
     private String pizzaName;
@@ -12,21 +16,24 @@ public abstract class Pizza {
     private String sauce;
 
     public void prepare() {
-        System.out.println("Preparing " + pizzaName + "...");
-        System.out.println("Tossing " + dough + "...");
-        System.out.println("Adding " + sauce + "...");
+        log.info("Preparing {}...", pizzaName);
+        log.info("Tossing {}...", dough);
+        log.info("Adding {}...", sauce);
     }
 
     public void bake() {
-        System.out.println("Baking for 25 minutes at 350...");
+        log.info("Baking for 25 minutes at 350...");
     }
 
     public void cut() {
-        System.out.println("Cutting the pizza into diagonal slices...");
+        log.info("Cutting the pizza into diagonal slices...");
     }
 
     public void box() {
-        System.out.println("Placing pizza in official PizzaStore box...");
+        log.info("Placing pizza in official PizzaStore box...");
     }
+
+
+
 
 }

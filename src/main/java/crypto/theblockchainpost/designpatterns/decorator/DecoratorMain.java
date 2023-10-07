@@ -1,5 +1,8 @@
 package crypto.theblockchainpost.designpatterns.decorator;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class DecoratorMain {
 
 
@@ -28,6 +31,7 @@ public class DecoratorMain {
 
 
     private static void printBeverageCost(Beverage beverage) {
-        System.out.println(beverage.description + ": $ " + beverage.cost());
+        log.info(beverage.description + ": $ " + beverage.cost());
     }
+
 }
