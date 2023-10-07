@@ -1,0 +1,53 @@
+@startuml
+
+interface Subject {
+    registerObserver(Observer o): void
+    removeObserver(Observer o): void
+    notifyObservers(): void
+}
+
+interface Observer {
+    update(): void
+}
+
+interface DisplayData {
+    display(): void
+}
+
+Subject <|-- WeatherData
+
+class WeatherData {
+    + registerObserver(Observer o): void
+    + removeObserver(Observer o): void
+    + notifyObservers(): void
+
+    - getHumidity()
+    - getTemperature()
+    - getHeat()
+}
+
+class CurrentConditionsDisplay {
+    + update(): void
+    + display(): void
+}
+
+class StatisticsDisplay {
+    + update(): void
+    + display(): void
+}
+class ForecastDisplay {
+    + update(): void
+    + display(): void
+}
+
+
+
+Observer <|-- CurrentConditionsDisplay
+Observer <|-- StatisticsDisplay
+Observer <|-- ForecastDisplay
+
+DisplayData <|-- CurrentConditionsDisplay
+DisplayData <|-- StatisticsDisplay
+DisplayData <|-- ForecastDisplay
+
+@enduml
